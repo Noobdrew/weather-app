@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&family=Ubuntu&display=swap');
+
+:root {
+    --main-color: #1789AB;
+    --sub-color: #18537A;
+    --text-color: #FFFFFF;
+    --off-White-color: #cfd9df;
+    --dark-color: #0E2D44;
+
+    --font: 'Ubuntu', Helvetica, Arial, sans-serif;
+    font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+
+}
+
+body {
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(23, 137, 171);
+    background: -moz-linear-gradient(180deg, rgba(23, 137, 171, 1) 20%, rgba(24, 109, 146, 1) 61%, rgba(24, 83, 122, 1) 84%, rgba(27, 65, 93, 1) 100%);
+    background: -webkit-linear-gradient(180deg, rgba(23, 137, 171, 1) 20%, rgba(24, 109, 146, 1) 61%, rgba(24, 83, 122, 1) 84%, rgba(27, 65, 93, 1) 100%);
+    background: linear-gradient(180deg, rgba(23, 137, 171, 1) 20%, rgba(24, 109, 146, 1) 61%, rgba(24, 83, 122, 1) 84%, rgba(27, 65, 93, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1789ab", endColorstr="#1b415d", GradientType=1);
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+
+    margin-top: 50px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+
+header input {
+    font-family: var(--font);
+    padding: 3px 10px 3px 10px;
+    width: 250px;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    color: var(--text-color);
+    font-weight: bold;
+    background-color: var(--dark-color);
+    appearance: none;
+    transition: 0.15s ease-in-out;
+    border: 3px solid var(--dark-color);
+}
+
+header input:focus, header button:hover {
+    outline: none;
+    border: 3px solid var(--text-color);
+}
+
+::placeholder {
+    color: var(--off-White-color);
+}
+
+header button {
+    font-size: 15px;
+    border: none;
+    background-color: var(--dark-color);
+    color: var(--text-color);
+    padding: 10px 15px 10px 15px;
+    border-radius: 20px;
+    font-family: var(--font);
+    font-weight: bold;
+    transition: 0.15s ease-in-out;
+    border: 3px solid var(--dark-color);
+}
