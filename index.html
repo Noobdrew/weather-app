@@ -13,8 +13,10 @@
 <body>
     <header>
         <div class="logo">Weather</div>
-  
-            <input type="text" class="search" placeholder="Type in a city">
+        <form action="#">
+            <input type="text" class="search" placeholder="Search location">
+        </form>
+
 
         <div class="units">
             <button class="celsius">°C, m/s</button>
@@ -22,30 +24,77 @@
         </div>
     </header>
     <div class="main">
-        <div class="location">Locatin text here</div>
+        <div class="location">London, Great Britain</div>
+        <div class="current-time">Friday 31 March 2023 | 14:53</div>
     </div>
     <div class="weather">
-        <div class="weather-temp">icon + 12C</div>
-        <div class="weather-description">
-            <div class="weather-text">Clear skyes</div>
-            <div class="feels-like">Feels like 10C</div>
-            <div class="wind-text">Light breeze</div>
+        <div class="main-weather">
+            <div class="weather-temp"> <img src="./img/cloudy.svg" alt="cloudy" width="50px"> 12°C</div>
+            <div class="weather-description">
+                <div class="weather-text">Clear skyes</div>
+                <div class="feels-like">Feels like 10C</div>
+                <div class="wind-text">Light breeze</div>
+            </div>
         </div>
-        <div class="wind">icon + 7m/s</div>
-        <div class="visibility">10km</div>
-        <div class="sunrise">7:06</div>
-        <div class="humidity">34%</div>
-        <div class="cloudiness">100%</div>
-        <div class="sunset">19:44</div>
-        <div class="uv-index">5</div>
-        <div class="chanse-of-rain">10%</div>
-        <div class="moonphase">waxing gibbous+ icon</div>
+
+        <div class="extra-weather">
+            <div class="grid-element">
+                <div class="grid-sub ">
+                    <div class="title">Wind</div>
+                    <div class="wind-content">
+                        <img src="./img/wind-arrow.svg" alt="wind" width="15px">
+                        <div class="wind-text weather-grid-text">7m/s</div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="grid-element">
+                <div class="grid-sub">
+                    <div class="title">Visibility</div>
+                    <div class="visibility-text weather-grid-text">100%</div>
+                </div>
+
+            </div>
+
+            <div class="humidity grid-element">
+                <div class="grid-sub">
+                    <div class="title">Humidity</div>
+                    <div class="humidity-text weather-grid-text">34%</div>
+
+                </div>
+            </div>
+            <div class="cloudiness grid-element">
+                <div class="grid-sub">
+                    <div class="title">Cloudiness</div>
+                    <div class="cloudiness-text weather-grid-text">100%</div>
+
+                </div>
+            </div>
+            <div class="uv-index grid-element">
+                <div class="grid-sub">
+                    <div class="title">UV index</div>
+                    <span class="uv-text weather-grid-text">5</span>
+
+                </div>
+            </div>
+            <div class="chanse-of-rain grid-element">
+                <div class="grid-sub">
+                    <div class="title">Chance of rain</div>
+                    <div class="chance-text weather-grid-text">10%</div>
+
+                </div>
+            </div>
+        </div>
+
+
+
     </div>
     <div class="next-days">
         <div class="date">01/04/23</div>
         <div class="next-days-temp">icon+20c</div>
         <div class="chance-rain">84%</div>
-<div class="max-wind">21km/h</div>
+        <div class="max-wind">21km/h</div>
     </div>
 </body>
 
