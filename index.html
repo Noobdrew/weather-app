@@ -13,8 +13,9 @@
 <body>
     <header>
         <div class="logo">Weather</div>
-        <form action="#">
+        <form action="#" class="search-form">
             <input type="text" class="search" placeholder="Search location" value="">
+            <button class="form-button" type="submit"><img src="./img/magnifier.svg" alt="search" width="20px"></button>
         </form>
 
 
@@ -29,11 +30,12 @@
     </div>
     <div class="weather">
         <div class="main-weather">
-            <div class="weather-temp"> <img src="./img/cloudy.svg" alt="cloudy" width="50px"> 12°C</div>
+            <div class="weather-temp"> <img src="./img/cloudy.svg" alt="cloudy" width="90px" class="weather-temp-img">
+                <div class="weather-temp-text">12°C</div></div>
             <div class="weather-description">
-                <div class="weather-text">Clear skyes</div>
+                <div id="weather-text" class="weather-text">Clear skyes</div>
                 <div class="feels-like">Feels like 10C</div>
-                <div class="wind-text">Light breeze</div>
+                
             </div>
         </div>
 
@@ -42,7 +44,7 @@
                 <div class="grid-sub ">
                     <div class="title">Wind</div>
                     <div class="wind-content">
-                        <img src="./img/wind-arrow.svg" alt="wind" width="15px">
+                        <img src="./img/wind-arrow.svg" alt="wind" width="15px" class="wind-arrow">
                         <div class="wind-text weather-grid-text">7m/s</div>
                     </div>
                 </div>
@@ -64,10 +66,10 @@
 
                 </div>
             </div>
-            <div class="cloudiness grid-element">
+            <div class="Pressure grid-element">
                 <div class="grid-sub">
-                    <div class="title">Cloudiness</div>
-                    <div class="cloudiness-text weather-grid-text">100%</div>
+                    <div class="title">Pressure</div>
+                    <div class="pressure-text weather-grid-text">100%</div>
 
                 </div>
             </div>
@@ -78,10 +80,10 @@
 
                 </div>
             </div>
-            <div class="chanse-of-rain grid-element">
+            <div class="precipitation grid-element">
                 <div class="grid-sub">
-                    <div class="title">Chance of rain</div>
-                    <div class="chance-text weather-grid-text">10%</div>
+                    <div class="title">Precipitation</div>
+                    <div class="precipitation-text weather-grid-text">10%</div>
 
                 </div>
             </div>

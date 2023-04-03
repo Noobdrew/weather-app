@@ -133,6 +133,11 @@ header button {
     margin-bottom: 25px;
 }
 
+.weather-temp{
+    display: flex;
+    gap: 15px;
+}
+
 .main-weather .weather-description .weather-text {
     font-size: 30px;
     font-weight: bold;
@@ -245,4 +250,20 @@ align-items: center;
 .field-day{
     font-size: 20px;
     font-weight: bold;
+}
+form{
+    position: relative;
+}
+form button{
+    padding: 0;
+    position: absolute;
+  border: none;
+  top: 9px;
+  right: 15px;
+    transition: none;
+}
+
+form .form-button:hover{
+ cursor: pointer;
+ border: none;
 }
