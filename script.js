@@ -96,8 +96,40 @@ function fillContentMetric() {
     }
 
     const currentHumidity = document.querySelector('.humidity-text')
-    currentHumidity.textContent=`${weatherObj.current.humidity}%`
+    currentHumidity.textContent = `${weatherObj.current.humidity}%`
 
     const currentRainChance = document.querySelector('.precipitation-text')
-    currentRainChance.textContent=`${weatherObj.current.precip_mm}mm`
+    currentRainChance.textContent = `${weatherObj.current.precip_mm}mm`
+    //--------------------change current weather extra info------------------
+
+    //--------------------change next three days data------------------------
+    const nextDay1 = document.querySelector('.day-1')
+    const nextDay1Arr = nextDay1.children
+    const nextDay2 = document.querySelector('.day-2')
+    const nextDay2Arr = nextDay2.children
+    const nextDay3 = document.querySelector('.day-3')
+    const nextDay3Arr = nextDay3.children
+
+    setNextDaysData(nextDay1Arr, 0)
+    setNextDaysData(nextDay2Arr, 1)
+    setNextDaysData(nextDay3Arr, 2)
+
+
+    function setNextDaysData(DayArr, index) {
+        Array.from(DayArr).forEach(element => {
+            if (element.classList.contains('next-days-temp')) {
+                element.children[0].src = weatherObj.forecast.forecastday[index].day.condition.icon
+                element.children[1].textContent = weatherObj.forecast.forecastday[index].day.avgtemp_c
+            } else if (element.classList.contains('date')) {
+                let nextDaysOfWeek = weekday[localDate.getDay() + index + 1]
+                element.textContent = nextDaysOfWeek
+            } else if(element.classList.contains('chance-rain')){
+                element.textContent = weatherObj.forecast.forecastday[index].hour[12].chance_of_rain+'%'
+            }   else if(element.classList.contains('max-wind-container')){
+               element.children[0].style.rotate =weatherObj.forecast.forecastday[index].hour[12].wind_degree+'deg'
+               element.children[1].textContent=Math.round((weatherObj.forecast.forecastday[index].hour[12].wind_kph/ 3.6 + Number.EPSILON) * 10) / 10
+            }
+        });
+    }
+
 }

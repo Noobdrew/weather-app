@@ -135,14 +135,20 @@ header button {
 
 .weather-temp{
     display: flex;
-    gap: 15px;
+    align-items: center;
+
+    gap: 0px;
 }
 
 .main-weather .weather-description .weather-text {
     font-size: 30px;
     font-weight: bold;
 }
-
+.weather-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .feels-like,
 .wind-text {
     font-size: 15px;
@@ -216,7 +222,7 @@ header button {
 .days{
   margin-top: 20px;
 display: grid;
-grid-template-columns: 2fr 1fr auto 1fr;
+grid-template-columns: 1fr 1fr auto 1fr;
 grid-template-rows: 1fr;
 gap: 50px;
 padding-bottom: 20px;
@@ -228,11 +234,13 @@ align-items: center;
 .days .date{
     font-size: 20px;
     font-weight: bold;
+    
 }
 
 .next-days-temp{
     display: flex;
-    gap:10px;
+    align-items: center;
+    gap:0px;
 }
 
 .next-days-temp-text{
@@ -242,9 +250,15 @@ align-items: center;
 
 .next-days-fields{
     display: grid;
-    grid-template-columns: 3fr auto auto 1fr;
+    grid-template-columns: 1fr 1fr auto 1fr;
     grid-template-rows: 1fr;
-    gap: 80px;
+    gap: 70px;
+}
+.fields-container{
+    width:495px ;
+}
+.field-temp{
+    margin-left: 20px;
 }
 
 .field-day{
@@ -266,4 +280,9 @@ form button{
 form .form-button:hover{
  cursor: pointer;
  border: none;
+}
+.max-wind-container{
+    margin-left: 20px;
+    display: flex;
+    gap:5px;
 }
