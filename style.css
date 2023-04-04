@@ -146,6 +146,7 @@ header button {
 }
 .weather-description{
     display: flex;
+    max-width: 200px;
     flex-direction: column;
     align-items: center;
 }
@@ -286,3 +287,78 @@ form .form-button:hover{
     display: flex;
     gap:5px;
 }
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #d2e6ec; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #878a9c; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #494d58; 
+  }
+
+@media only screen and (max-width: 950px) {
+    body{
+        width: 87.10vw;
+        height: 130vh;
+        margin-left: 20px;
+    }
+   header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+   }
+   .weather{
+    flex-direction: column;
+    gap: 5px;
+   }
+   .main-weather{
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+   }
+   .main-weather .weather-temp {
+    margin-bottom: 0;
+    
+   }
+   .weather-description{
+    align-items: flex-start;
+   
+   }
+   .main .location{
+    text-align: center;
+   }
+   .next-days{
+    width: 350px;
+   }
+   .days{
+    gap: 20px;
+   }
+   .days .date{
+    width: 120px;
+   }
+   .fields-container{
+    width: auto;
+   }
+   header .logo {
+    width: auto;
+}
+
+header .units {
+    width: auto;
+}
+
+  }
