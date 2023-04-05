@@ -69,6 +69,10 @@ header button:hover {
     border: 3px solid var(--text-color);
 }
 
+.active{
+    border: 3px solid var(--text-color);
+}
+
 ::placeholder {
     color: var(--off-White-color);
 }
@@ -133,7 +137,7 @@ header button {
     margin-bottom: 25px;
 }
 
-.weather-temp{
+.weather-temp {
     display: flex;
     align-items: center;
 
@@ -144,12 +148,14 @@ header button {
     font-size: 30px;
     font-weight: bold;
 }
-.weather-description{
+
+.weather-description {
     display: flex;
     max-width: 200px;
     flex-direction: column;
     align-items: center;
 }
+
 .feels-like,
 .wind-text {
     font-size: 15px;
@@ -220,145 +226,183 @@ header button {
     align-items: center;
 }
 
-.days{
-  margin-top: 20px;
-display: grid;
-grid-template-columns: 1fr 1fr auto 1fr;
-grid-template-rows: 1fr;
-gap: 50px;
-padding-bottom: 20px;
-border-bottom: 2px solid var(--off-White-color);
-align-items: center;
+.days {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr auto 1fr;
+    grid-template-rows: 1fr;
+    gap: 50px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--off-White-color);
+    align-items: center;
 
 }
 
-.days .date{
+.days .date {
     font-size: 20px;
     font-weight: bold;
-    
+
 }
 
-.next-days-temp{
+.next-days-temp {
     display: flex;
     align-items: center;
-    gap:0px;
+    gap: 0px;
 }
 
-.next-days-temp-text{
+.next-days-temp-text {
     font-size: 20px;
     font-weight: bold;
 }
 
-.next-days-fields{
+.next-days-fields {
     display: grid;
     grid-template-columns: 1fr 1fr auto 1fr;
     grid-template-rows: 1fr;
     gap: 70px;
 }
-.fields-container{
-    width:495px ;
+
+.fields-container {
+    width: 420px;
 }
-.field-temp{
+
+.field-temp {
     margin-left: 20px;
 }
 
-.field-day{
+.field-day {
     font-size: 20px;
     font-weight: bold;
 }
-form{
+.field-wind{
+
+place-self: center;
+}
+
+form {
     position: relative;
 }
-form button{
+
+form button {
     padding: 0;
     position: absolute;
-  border: none;
-  top: 9px;
-  right: 15px;
+    border: none;
+    top: 9px;
+    right: 15px;
     transition: none;
 }
 
-form .form-button:hover{
- cursor: pointer;
- border: none;
+form .form-button:hover {
+    cursor: pointer;
+    border: none;
 }
-.max-wind-container{
+
+.max-wind-container {
     margin-left: 20px;
     display: flex;
-    gap:5px;
+    gap: 5px;
 }
+
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: #d2e6ec; 
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: #878a9c; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: #494d58; 
-  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #d2e6ec;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #878a9c;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #494d58;
+}
 
 @media only screen and (max-width: 950px) {
-    body{
+    body {
         width: 87.10vw;
-        height: 130vh;
+        height: 150vh;
         margin-left: 20px;
     }
-   header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-   }
-   .weather{
-    flex-direction: column;
-    gap: 5px;
-   }
-   .main-weather{
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 20px;
-   }
-   .main-weather .weather-temp {
-    margin-bottom: 0;
-    
-   }
-   .weather-description{
-    align-items: flex-start;
-   
-   }
-   .main .location{
-    text-align: center;
-   }
-   .next-days{
-    width: 350px;
-   }
-   .days{
-    gap: 20px;
-   }
-   .days .date{
-    width: 120px;
-   }
-   .fields-container{
-    width: auto;
-   }
-   header .logo {
-    width: auto;
-}
 
-header .units {
-    width: auto;
-}
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
 
-  }
+    .weather {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .main-weather {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+       flex-direction: column;
+        gap: 20px;
+    }
+
+    .grid-element{
+        align-items: center;
+        justify-items: center;
+    }
+    .grid-sub{
+      text-align: center;
+    }
+
+    .main-weather .weather-temp {
+        margin-bottom: 0;
+
+    }
+
+    .weather-description {
+        align-items: flex-start;
+
+    }
+
+    .main .location {
+        text-align: center;
+    }
+
+    .next-days {
+        width: 350px;
+    }
+
+    .days {
+        gap: 20px;
+    }
+.field-day{
+    width: 100px;
+}
+.field-temp{
+    width: 70px;
+}
+.field-rain{
+    width: 50px;
+}
+    .days .date {
+        width: 120px;
+    }
+
+    .fields-container {
+        width: auto;
+    }
+
+    header .logo {
+        width: auto;
+    }
+
+    header .units {
+        width: auto;
+    }
+
+}
