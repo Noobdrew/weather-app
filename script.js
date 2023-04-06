@@ -62,7 +62,7 @@ function fillContentMetric() {
     //-----------------------change location text--------------------------
 
     //----------------------get local time---------------------------------
-    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"]
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday","Monday", "Tuesday",]
     const monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     function padWithLeadingZeros(num, totalLength) {
         return String(num).padStart(totalLength, '0');
@@ -169,7 +169,7 @@ function fillContentMetric() {
 
 function fillContentImperial() {
     //----------------------------------------get time data---------------------------------
-    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"]
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday","Monday", "Tuesday",]
     const dateTimeZone = new Date().toLocaleString('en-US', { timeZone: `${weatherObj.location.tz_id}` })
     const localDate = new Date(dateTimeZone)
     let dayOfWeek = weekday[localDate.getDay()];
