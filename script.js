@@ -62,7 +62,7 @@ function fillContentMetric() {
     //-----------------------change location text--------------------------
 
     //----------------------get local time---------------------------------
-    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"]
     const monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     function padWithLeadingZeros(num, totalLength) {
         return String(num).padStart(totalLength, '0');
@@ -154,6 +154,7 @@ function fillContentMetric() {
                 element.children[1].textContent = weatherObj.forecast.forecastday[index].day.avgtemp_c
             } else if (element.classList.contains('date')) {
                 let nextDaysOfWeek = weekday[localDate.getDay() + index + 1]
+                
                 element.textContent = nextDaysOfWeek
             } else if (element.classList.contains('chance-rain')) {
                 element.textContent = weatherObj.forecast.forecastday[index].hour[12].chance_of_rain + '%'
@@ -168,7 +169,7 @@ function fillContentMetric() {
 
 function fillContentImperial() {
     //----------------------------------------get time data---------------------------------
-    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday","Sunday"]
     const dateTimeZone = new Date().toLocaleString('en-US', { timeZone: `${weatherObj.location.tz_id}` })
     const localDate = new Date(dateTimeZone)
     let dayOfWeek = weekday[localDate.getDay()];
